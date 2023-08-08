@@ -1,0 +1,323 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  box-sizing: border-box;
+}
+body{
+  background: #fff;
+  color: #0a0a0a
+}
+#header{
+  width: 100%;
+  height: 100vh;
+  background:#fff;
+  background-size: cover;
+  background-position: center;
+ 
+}
+nav {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+ 
+}
+nav ul li{
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+
+}
+
+
+
+.logo{
+  display: inline;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding-left: 5px;
+  
+  
+}
+
+
+.menuclass {
+  display: inline;
+  margin-bottom: 25px;
+  
+  padding-left:230px ; 
+  
+  
+
+}
+.imgclass{
+  margin-bottom:20px ;
+  
+}
+h1{
+  font-size: 39px;
+  padding-left: 20px;
+  
+}
+p{
+  font-size: 17px;
+  color: #6b6b6b;
+  font-weight: 500;
+  padding-left: 40px;
+  line-height: 25px;
+  margin-top: 15px;
+}
+.p2{
+  font-size: 17.8px;
+  margin-top: 2px;
+  padding-left: 36px;
+ 
+}
+.p3{
+  font-size: 17px;
+  
+  margin-top: 1px;
+  padding-left: 32px;
+}
+button{
+  margin-left: 140px;
+  margin-top: 30px;
+  
+  
+  
+}
+.btn{
+  border-radius: 13px;
+  
+  cursor: pointer;
+  padding: 10px 20px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+  background: #0a0a0a;
+  border: 1.5px solid #0a0a0a; 
+  
+}
+.btn:hover{
+  color: #0a0a0a;
+  background: #fff;
+}
+.cont-3{
+  margin-top: 50px;
+  margin-bottom: 20px;
+  
+}
+.dropdown {
+  display: none;
+}
+.row2{
+  margin-left: 30px;
+  
+}
+.im1{
+  width: 70px;
+  margin-left: -10px;
+  
+}
+.im2{
+  width: 50px;
+  margin-left: 33px;
+
+}
+.im3{
+  width: 70px;
+  margin-left: 30px;
+
+}
+.im4{
+  width: 70px;
+  margin-left: 25px;
+
+}
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+
+
+.btnreg{
+  border-radius: 14px;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 8px 20px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #6b6b6b;
+  border: 2px solid #6b6b6b; 
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.btnreg:hover{
+  color: #0a0a0a;
+  border: 2px solid #0a0a0a
+}
+.left-links li a{
+  text-decoration: none;
+  color: #6b6b6b;
+  font-size: 13px;
+  font-weight: 500;
+ 
+}
+
+
+
+
+.left-links li {
+  margin-right: 5px; 
+  margin-left: 50px;    
+}
+
+
+
+/* ... Your existing CSS ... */
+
+/* Style for dropdown menus */
+
+/* Style for dropdown menu items */
+
+/* Hover effect for dropdown menu items */
+.dropdown li:hover {
+  background-color: #f1f1f1;
+}
+
+/* ... Your existing CSS ... */
+
+
+/* Show dropdown on hover */
+
+.left-links li a:hover {
+  color: #0a0a0a; /* Change color on hover */
+}
+
+.left-links li.careers-link a:hover {
+  color: #6b6b6b; 
+}
+
+nav .closeclass,
+nav .menuclass{
+  display: none;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  nav .closeclass,
+  nav .menuclass {
+    display: block;
+  }
+
+  
+
+  nav ul {
+    position: fixed; 
+    top: 0;
+    right: -240px; 
+    width: 240px; 
+    height: 100vh;
+    background-color: #fff;
+    padding-top: 77px;
+    z-index: 2;
+    transition: right 0.5s;
+  }
+
+
+  /* Display the dropdown menu items */
+  .dropdown.active {
+    display: block;
+    position: static;
+  }
+  .dropdown {
+    display: none;
+    position: absolute; /* Change this to absolute */
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    list-style: none;
+    border-radius: 10px;
+    padding: 8px 0; /* Adjust padding for better spacing */
+    min-width: 200px;
+    margin-top: 5px; /* Adjust margin for better spacing */
+    border: 1px solid #ddd;
+    /* Add the following properties */
+    left: 0;
+    top: 110%; /* Place the dropdown below the parent */
+  }
+  .dropdown li {
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    
+  }
+  
+
+  
+  
+
+
+  nav ul li{
+    display: block;
+    margin-bottom: 25px;
+    padding-top: 10px;
+    
+    
+    
+    
+    
+  }
+  
+
+
+  nav ul .closeclass{
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+  }
+  .left-links li a {
+    font-size: 18px;
+    line-height: 5px;
+    
+  }
+  .li-log{
+    padding-left: 45px;
+    font-size: 5px;
+    
+    
+    
+  }
+
+
+  .btnreg{
+    padding: 15px 70px;
+    margin-left: -30px;
+    
+    
+  }
+  nav .menuclass:checked ~ .overlay {
+    display: block; 
+  }
+  .menuclass {
+  
+    cursor: pointer; /* Add this line */
+  }
+ 
+    
+  
+  
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Design</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="overlay"></div>
+  <header>
+    <div class="cont">
+      <nav>
+        <img src="images/logo.svg" alt="Logo" class="logo">
+        
+        <ul class="left-links" id="sidemenuu">
+          <li>
+            <a href="#">Features <img src="images/icon-arrow-down.svg" alt="Down Arrow"></a>
+            <ul class="dropdown" id="featuresMenu">
+              <li><a href="#"><img src="images/icon-todo.svg"> Todo List</a></li>
+              <li><a href="#"><img src="images/icon-calendar.svg"> Calendar</a></li>
+              <li><a href="#"><img src="images/icon-reminders.svg"> Reminders</a></li>
+              <li><a href="#"><img src="images/icon-planning.svg"> Planning</a></li>
+            </ul>
+          </li>
+        
+          <li>
+            <a href="#">Company <img class="arrow-icon" src="images/icon-arrow-down.svg" alt="Down Arrow"></a>
+            <ul class="dropdown" id="companyMenu">
+              <li><a href="#">History</a></li>
+              <li><a href="#">Our team</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </li>
+          <li class="careers-link"><a href="#">Careers</a></li>
+          <li><a href="#">About</a></li>
+          <li class="li-log"><a href="#">Log in</a></li>
+          <li><a href="#"><button class="btnreg">Register</button></a></li>
+          <img src="images/icon-close-menu.svg" alt="Close Icon" class="closeclass" onclick="closemenu()">
+        </ul>
+      
+        <img src="images/icon-menu.svg" alt="Menu Icon" class="menuclass" onclick="openmenu()">
+      </nav>
+      
+      
+      
+    </div>
+    <div class="imgclass">
+      <img src="images/image-hero-mobile.png" alt="" width="390px">
+    </div>
+    <div class="cont-2">
+      <div class="row">
+        <h1>Make remote work</h1>
+        <p>Get your team in sync, no matter your</p>
+        <p class="p2">location. Streamline processes, create</p>
+        <p class="p3">team rituals, and watch productivity soar.</p>
+      </div>
+      <button class="btn">Learn More</button>
+    </div>
+    <div class="cont-3">
+      <div class="row2">
+        <img class="im1" src="images/client-databiz.svg" alt="">
+        <img class="im2" src="images/client-audiophile.svg" alt="">
+        <img class="im3" src="images/client-meet.svg" alt="">
+        <img class="im4" src="images/client-maker.svg" alt="">
+      </div>
+    </div>
+  </header>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const featuresDropdown = document.querySelector('.left-links > li:first-child');
+      const companyDropdown = document.querySelector('.left-links > li:nth-child(2)');
+      const featuresMenu = document.querySelector('#featuresMenu');
+      const companyMenu = document.querySelector('#companyMenu');
+      const overlay = document.querySelector('.overlay');
+  
+      featuresDropdown.addEventListener('click', (event) => toggleDropdown(event, featuresMenu));
+      companyDropdown.addEventListener('click', (event) => toggleDropdown(event, companyMenu));
+  
+      overlay.addEventListener('click', () => {
+        hideDropdowns(); // Hide both dropdowns on overlay click
+        overlay.style.display = 'none'; // Hide the overlay
+      });
+  
+      featuresMenu.addEventListener('click', (event) => {
+        event.stopPropagation();
+      });
+  
+      companyMenu.addEventListener('click', (event) => {
+        event.stopPropagation();
+      });
+  
+      function toggleDropdown(event, menu) {
+        if (window.innerWidth <= 600) {
+          menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+          positionDropdown(event.target.parentElement, menu);
+          overlay.style.display = 'block'; // Show the overlay when a dropdown is opened
+        }
+      }
+  
+      function positionDropdown(parent, menu) {
+        const rect = parent.getBoundingClientRect();
+        menu.style.left = '0'; // Align the dropdown with the left edge
+        menu.style.top = rect.height + 'px'; // Position below the parent item
+      }
+
+  
+      function hideDropdowns() {
+        featuresMenu.style.display = 'none';
+        companyMenu.style.display = 'none';
+      }
+    });
+  
+    var sidemnuu = document.getElementById("sidemenuu");
+    function openmenu() {
+      sidemnuu.style.right = "0";
+      overlay.style.display = 'block'; // Show the overlay when the menu is opened
+    }
+  
+    function closemenu() {
+      sidemnuu.style.right = "-240px";
+      overlay.style.display = 'none'; // Hide the overlay when the menu is closed
+    }
+  </script>
+  
+
+</body>
+</html>
